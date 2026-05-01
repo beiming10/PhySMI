@@ -7,9 +7,9 @@ a self-supervised framework for underdetermined spectral unmixing that enables h
 PhySMI is designed for spectral unmixing and denoising tasks, particularly in fluorescence microscopy imaging. It employs a dual-branch architecture that combines:
 
 - **Self-supervised reconstruction loss** for accurate spectral decomposition
-- **Self-supervised denoising** via the STC (Signal-to-Texture Contrasting) library
-- **GAN-based adversarial training** for enhanced texture preservation
-- **Branch consistency regularization** for robust dual-branch fusion
+- **Self-supervised denoising** dual branch similarity 
+- **GAN-based adversarial training** structure channel:Morphology prior for enhanced  preservation
+
 
 ### Dual-Branch Input Channels
 
@@ -67,7 +67,7 @@ python testPIANetD_single_dual.py --config config_PIANet_D_488_532_561_dual_sing
 | Mode | Description |
 |------|-------------|
 | `dual` | Fusion of Branch A and Branch B outputs |
-| `single_a` | Only Branch A output |
+| `single_a` | Only Branch A output(***) |
 | `single_b` | Only Branch B output |
 
 #### Full Command Options
