@@ -1,6 +1,6 @@
 # PhySMI: Spectral Unmixing with Hybrid-SelfSupervised Adversarial Learning
 
-A PyTorch implementation of PhySMI, a dual-branch hybrid-self-supervised adversarial unmixing framework with self-supervised denoising for hyperspectral image analysis.
+a self-supervised framework for underdetermined spectral unmixing that enables highly multiplexed imaging after training without dense spectral measurements on standard fluorescence microscopes.
 
 ## Overview
 
