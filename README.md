@@ -59,7 +59,7 @@ The `testPIANetD_single_dual.py` script supports single/batch inference with mul
 #### Basic Usage
 
 ```bash
-python testPIANetD_single_dual.py --config config_PIANet_D_488_532_561_dual_single.json --model generator_best.pth --input input_image.tif --output results/
+python test_PhySMI.py --config config_PIANet_D_488_532_561_dual_single_simulation_testtime.json --model "generator_epoch_best.pth" --input ./TestDATA --output ./OUTPUT --output-mode single_a --no-visualize
 ```
 
 #### Output Modes
