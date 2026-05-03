@@ -1,0 +1,63 @@
+{
+    "data_root": "J:\\STC_SF\\1117",
+    "outf": "./exp/PIANet-D_Experiment/SpectraFree/",
+    "gpu_id": "0",
+    "num_workers": 4,
+
+    "model_type": "PhySMI",
+    "patch_size": 128,
+    "batch_size": 4,
+    "end_epoch": 200,
+    "val_freq": 2,
+    "num_val_save": 10,
+
+    "hyper_frames": 8,
+    "num_endmembers": 5,
+
+    "input_indices_a": [0, 1, 2],
+    "input_indices_b": [0, 1, 2],
+
+
+    "unfreeze_endmembers": false,
+
+    "endmember_path": "endmembers_SF_542_SybrGold_488_514_633.csv",
+    "stc_channels": [
+        "mitochondria",
+        "nuclei",
+        "lipid",
+        "microtube",
+        "actin"
+    ],
+    "stc_paths": [
+        "H:\\20250407-Mito@Cos7\\TiffCropsAll",
+        "H:\\20250422-SybrGold@Cos7\\TiffCropsAll",
+        "H:\\20251002-Lipid488\\TiffCropsAll",
+        "H:\\20250419Microtube-CF514\\TiffCropsAll",
+        "J:\\20250519YF633-Actin@Cos7\\TiffCropsAll"
+    ],
+
+    "use_tiff": true,
+    "stride": 64,
+    "step": 8,
+    "scalefactor": 2500.0,
+
+    "init_lr_g": 2e-4,
+    "min_lr_g": 4e-6,
+    "init_lr_d": 2e-4,
+    "min_lr_d": 4e-6,
+    "pretrained_model_path":null,
+    "gan_warmup_iters": 0,
+
+    
+    "lambda_recon": 2000.0,
+    "lambda_gan": 1.0,
+    "lambda_denoise":1000.0,
+    "lambda_contrastive": 1.0,
+    "lambda_bg": 0.0,
+    "lambda_signal": 0.0,
+    "lambda_sparse": 0.0,
+    "lambda_cross_suppression": 0.0,
+    "cross_suppression_pairs": [[1,2]],
+    "lambda_abundance_consistency": 1.0,
+    "mode": "dual"
+}
