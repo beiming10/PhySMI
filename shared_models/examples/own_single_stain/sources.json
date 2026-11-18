@@ -1,0 +1,52 @@
+[
+  {
+    "file": "Mito.npy",
+    "structure": "Mito",
+    "source_id": "mitochondria/01_512x512-10Hz_0001_crop1.npy",
+    "role": "Train example texture",
+    "axes": "Y,X",
+    "dtype": "float32",
+    "source_preparation": "Processed single-channel library texture; not a native multispectral acquisition",
+    "SHA256": "764f5fd1c12bbf74100c1c8334c358e726dc3e268b3d06cfafda8b5fa4f96dab"
+  },
+  {
+    "file": "Nucleus.npy",
+    "structure": "Nucleus",
+    "source_id": "nuclei/02_512x512-10Hz_0002_crop1.npy",
+    "role": "Train example texture",
+    "axes": "Y,X",
+    "dtype": "float32",
+    "source_preparation": "Processed single-channel library texture; not a native multispectral acquisition",
+    "SHA256": "7209ae1600fa6b7c9b66aa7200eed49c56b10293d064216081fdc67bba35c369"
+  },
+  {
+    "file": "LDs.npy",
+    "structure": "LDs",
+    "source_id": "lipid/01_512x512-10Hz_0001_crop1.npy",
+    "role": "Train example texture",
+    "axes": "Y,X",
+    "dtype": "float32",
+    "source_preparation": "Processed single-channel library texture; not a native multispectral acquisition",
+    "SHA256": "15bc003015e418f45d9408308083fc8f9855cd41140edff556b81f6b218accb2"
+  },
+  {
+    "file": "Tubulin.npy",
+    "structure": "Tubulin",
+    "source_id": "microtube/01_512x512-10Hz_0001_crop1.npy",
+    "role": "Train example texture",
+    "axes": "Y,X",
+    "dtype": "float32",
+    "source_preparation": "Processed single-channel library texture; not a native multispectral acquisition",
+    "SHA256": "9e94e15229f8f2aaed75d6c1d4aefff1601bde410db05e7113e4e349f79085f6"
+  },
+  {
+    "file": "Actin.npy",
+    "structure": "Actin",
+    "source_id": "actin/02_512x512-10Hz_0002_crop1.npy",
+    "role": "Train example texture",
+    "axes": "Y,X",
+    "dtype": "float32",
+    "source_preparation": "Processed single-channel library texture; not a native multispectral acquisition",
+    "SHA256": "0f49ca3fb57170b46f2a077e68f610e6e8f3b8090c5ce19e23f8b67fd14ab4ee"
+  }
+]

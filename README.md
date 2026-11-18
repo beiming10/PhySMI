@@ -4,6 +4,10 @@ a self-supervised framework for underdetermined spectral unmixing that enables h
 
 ## Overview
 
+The current four shared-prior models, generator weights, spectral configurations,
+and runnable inference and training examples are in [shared_models](shared_models/).
+The implementation below is retained as the earlier version.
+
 PhySMI is designed for spectral unmixing and denoising tasks, particularly in fluorescence microscopy imaging. It employs a dual-branch architecture that combines:
 
 - **Self-supervised reconstruction loss** for accurate spectral decomposition
