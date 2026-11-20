@@ -6,7 +6,7 @@ PhySMI combines spectral reconstruction, a shared cellular-image prior and cross
 
 | Model | Application | Input channels | Output components |
 |---|---|---:|---:|
-| `static` | Fixed cells, single-stain controls and structure–spectrum reassignment | 3 | 5 |
+| `static` | Fig4 and crosstalk | 3 | 5 |
 | `live` | Four- and five-colour live cells | 3 | 5 |
 | `cells` | External NIH-3T3 five-organelle images | 3 integrated emission bands | 5 |
 | `ecoli` | External 13-dye E. coli images | 5 integrated emission bands | 13 |
