@@ -1,5 +1,6 @@
 {
   "name": "cells",
+  "inference": {"tile_size": 128, "tile_overlap": 64},
   "components": [
     "Nucleus_Hoechst",
     "Lysosome_LysoTracker",

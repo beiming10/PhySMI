@@ -1,5 +1,6 @@
 {
   "name": "ecoli",
+  "inference": {"tile_size": 512, "tile_overlap": 0},
   "components": [
     "AF488",
     "AF514",

@@ -1,0 +1,597 @@
+{
+  "examples": [
+    {
+      "id": "fixed_cell_01",
+      "file": "data_561_532_488_0001.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "9ac827e163da563115e66b0cfb08a7183306b2a685178c77e2e5d6050f3202f8"
+    },
+    {
+      "id": "fixed_cell_02",
+      "file": "data_561_532_488_0002.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "61231c75c53dbde30923f8f5ab333f832c8dacce7b2d735a59841ba52f34f037"
+    },
+    {
+      "id": "fixed_cell_03",
+      "file": "data_561_532_488_0003.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "4df25aae0ac994a74c1fef4e148915b1c0aaaa41a5758ac8b17184f832dc8a5a"
+    },
+    {
+      "id": "fixed_cell_04",
+      "file": "data_561_532_488_0004.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "d761d22bf75b1b33f8d406a0d3a94b3a96b87b1f9b3762bc5507d14a0fbc61bb"
+    },
+    {
+      "id": "fixed_cell_05",
+      "file": "data_561_532_488_0005.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "a8275d2024181eff46b085d95e859d954ce30bbb975b7e9feaaa5fe4c871eb15"
+    },
+    {
+      "id": "fixed_cell_06",
+      "file": "data_561_532_488_0006.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "4f6750636d3f6299a5f9271852e5e3b869093b6e94c23b2da53ecc3f96744167"
+    },
+    {
+      "id": "fixed_cell_07",
+      "file": "data_561_532_488_0007.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "5045e12dc0f206686415df3573bb2c842af381ac259dabc36f924f4ce50cc6fc"
+    },
+    {
+      "id": "fixed_cell_08",
+      "file": "data_561_532_488_0008.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "fixed-cell acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "64832c8b2012133bd6f81ab8761de27db9e6ab282602e524b16960e3f729d54d"
+    },
+    {
+      "id": "Mito",
+      "file": "single_stain/Mito.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "experimental single-stain repeated-acquisition mean",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "1bdbe5a5c7c301120ffacf72327ece1a081d3e05df03225c537c5e6cf9cbc307",
+      "labelled_structure": "Mito"
+    },
+    {
+      "id": "Nucleus",
+      "file": "single_stain/Nucleus.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "experimental single-stain repeated-acquisition mean",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "819cba4dee2e986b83ce6c757b9991d660bab32f77e4e93c629d349a37cd7a7d",
+      "labelled_structure": "Nucleus"
+    },
+    {
+      "id": "LDs",
+      "file": "single_stain/LDs.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "experimental single-stain repeated-acquisition mean",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "9fc2d8605b74e23df22eb5a7589085283a7bdcc5eaffc5e46cfa199ca5028442",
+      "labelled_structure": "LDs"
+    },
+    {
+      "id": "Tubulin",
+      "file": "single_stain/Tubulin.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "experimental single-stain repeated-acquisition mean",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "ff625b8379e12b8e29054b07d6d4af520200b8d2234b0c9c721ebadbfa0f15e0",
+      "labelled_structure": "Tubulin"
+    },
+    {
+      "id": "Actin",
+      "file": "single_stain/Actin.tif",
+      "model": "static",
+      "mode": "raw",
+      "kind": "experimental single-stain repeated-acquisition mean",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "100ff5baa304aa7ef0af847f27207fb4e8edc59b77a1420a161d49f172973a38",
+      "labelled_structure": "Actin"
+    },
+    {
+      "id": "four_colour_cell01_cycle0001",
+      "file": "live_cells/four_colour_cell01_cycle0001.tif",
+      "model": "live",
+      "mode": "raw",
+      "kind": "native three-channel four-colour acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "cbb8f1a96599914e47264854301e579b0c2bb2355dbfceee9c29c00922baa746",
+      "panel": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "cycle_one_based": 1
+    },
+    {
+      "id": "four_colour_cell01_cycle0400",
+      "file": "live_cells/four_colour_cell01_cycle0400.tif",
+      "model": "live",
+      "mode": "raw",
+      "kind": "native three-channel four-colour acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "d5ebb6b2599f78b64a07cb993e59cc594a8758429d100f3d98a34fa8f4bb3c05",
+      "panel": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "cycle_one_based": 400
+    },
+    {
+      "id": "four_colour_cell03_cycle0001",
+      "file": "live_cells/four_colour_cell03_cycle0001.tif",
+      "model": "live",
+      "mode": "raw",
+      "kind": "native three-channel four-colour acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "039aee38ffa4888c0eeaaf3468582b00db9bea66ead6f7bce6ad5c7d70fbb7f7",
+      "panel": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "cycle_one_based": 1
+    },
+    {
+      "id": "four_colour_cell03_cycle0400",
+      "file": "live_cells/four_colour_cell03_cycle0400.tif",
+      "model": "live",
+      "mode": "raw",
+      "kind": "native three-channel four-colour acquisition",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "0f3ca516c54201d0b64c0cb64ee2eafb592789dda638f5ae652982ae8cff6e4b",
+      "panel": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "cycle_one_based": 400
+    },
+    {
+      "id": "five_colour_selected_cycle0073",
+      "file": "live_cells/five_colour_selected_cycle0073.tif",
+      "model": "live",
+      "mode": "raw",
+      "kind": "five-colour acquisition with three selected excitation channels",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "uint16",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "e5fbb54de2f0cd335a5e4b831211eb498c57fad597788c154fbc8d556c94bba6",
+      "panel": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "offset": [
+        255,
+        256,
+        295
+      ],
+      "cycle_one_based": 73
+    },
+    {
+      "id": "structure_spectrum_exchange_cell01",
+      "file": "fixed_cells/structure_spectrum_exchange_cell01.npy",
+      "model": "static",
+      "mode": "normalized",
+      "kind": "computational structure-spectrum reassignment of an acquired cell",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "float32",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "5caf132bd255ba970d1f60966f8b59bba03a7c4bd2b33cce81b7da2adadb48ee"
+    },
+    {
+      "id": "structure_spectrum_exchange_cell02",
+      "file": "fixed_cells/structure_spectrum_exchange_cell02.npy",
+      "model": "static",
+      "mode": "normalized",
+      "kind": "computational structure-spectrum reassignment of an acquired cell",
+      "axes": "CYX",
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "dtype": "float32",
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ],
+      "sha256": "d8a9bcc87257eeca610869003d5fd62792ab84e0cf19d083fcb8d89c44443ef7"
+    },
+    {
+      "id": "NIH3T3_field33_three_bands",
+      "file": "external_cells/NIH3T3_field33_three_bands.npy",
+      "model": "cells",
+      "mode": "raw",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "kind": "integrated measured emission channels",
+      "source_doi": "10.5281/zenodo.13625087",
+      "license": "CC-BY-4.0",
+      "sha256": "36b8ee5fbc733139431d183aead88a6d3dfaef9413f587498fc195b8e1342ae1",
+      "source_field": "33",
+      "creator": "Leonel Malacrida",
+      "tile_size": 128,
+      "tile_overlap": 64
+    },
+    {
+      "id": "NIH3T3_field34_three_bands",
+      "file": "external_cells/NIH3T3_field34_three_bands.npy",
+      "model": "cells",
+      "mode": "raw",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "kind": "integrated measured emission channels",
+      "source_doi": "10.5281/zenodo.13625087",
+      "license": "CC-BY-4.0",
+      "sha256": "34c28761860171b6ca5affae25a01299e7eccc795c7e0e915f3425aa3904bdcc",
+      "source_field": "34",
+      "creator": "Leonel Malacrida",
+      "tile_size": 128,
+      "tile_overlap": 64
+    },
+    {
+      "id": "NIH3T3_field35_three_bands",
+      "file": "external_cells/NIH3T3_field35_three_bands.npy",
+      "model": "cells",
+      "mode": "raw",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "kind": "integrated measured emission channels",
+      "source_doi": "10.5281/zenodo.13625087",
+      "license": "CC-BY-4.0",
+      "sha256": "d6fac717ad1f2997d64a6c9dd3d0252ecabb0b1cd80eb27bfad400924b7c320f",
+      "source_field": "35",
+      "creator": "Leonel Malacrida",
+      "tile_size": 128,
+      "tile_overlap": 64
+    },
+    {
+      "id": "NIH3T3_field38_three_bands",
+      "file": "external_cells/NIH3T3_field38_three_bands.npy",
+      "model": "cells",
+      "mode": "raw",
+      "axes": "CYX",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "kind": "integrated measured emission channels",
+      "source_doi": "10.5281/zenodo.13625087",
+      "license": "CC-BY-4.0",
+      "sha256": "78318fd310d6db63082cc814503613edb6cbfb231e43b832a3a612c4ccc7d751",
+      "source_field": "38",
+      "creator": "Leonel Malacrida",
+      "tile_size": 128,
+      "tile_overlap": 64
+    },
+    {
+      "id": "Ecoli_mixture_five_bands",
+      "file": "ecoli/Ecoli_mixture_five_bands.tif",
+      "model": "ecoli",
+      "mode": "raw",
+      "axes": "CYX",
+      "shape": [
+        5,
+        1024,
+        1024
+      ],
+      "dtype": "uint16",
+      "kind": "integrated measured emission channels",
+      "source_doi": "10.5281/zenodo.13988378",
+      "license": "CC-BY-4.0",
+      "sha256": "09b6eee291ba69b8f51286c163867b55bb6ad9e8c0f543911901efb7b01d44a8",
+      "creator": "Ruogu Wang",
+      "crop_xywh": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "input_groups_zero_based": [
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        [
+          19,
+          20,
+          21
+        ],
+        [
+          21,
+          22
+        ]
+      ],
+      "tile_size": 512,
+      "tile_overlap": 0
+    }
+  ]
+}

@@ -1,115 +1,67 @@
 # Shared-prior PhySMI models
 
-Four spectral configurations use the same feature backbone and a shared,
-unlabelled image prior. Each configuration has its own response matrix and
-generator weights.
+Four configurations share the feature backbone and an unlabelled image prior. Each has its own response matrix and generator weights.
 
-| Configuration | Application | Measured inputs | Component outputs |
+| Configuration | Application | Inputs | Outputs |
 |---|---|---:|---:|
-| `static` | Laboratory fixed cells and structure–spectrum exchange | 3 excitation channels | 5 |
+| `static` | Laboratory fixed cells and structure–spectrum reassignment | 3 excitation channels | 5 |
 | `live` | Laboratory four- and five-colour live cells | 3 excitation channels | 5 |
-| `cells` | External NIH-3T3 five-organelle spectral data | 3 integrated emission inputs | 5 |
-| `ecoli` | External 13-dye E. coli spectral data | 5 integrated emission inputs | 13 |
+| `cells` | NIH-3T3 five-organelle data | 3 integrated emission bands | 5 |
+| `ecoli` | 13-dye E. coli data | 5 integrated emission bands | 13 |
 
-The files in `weights/` contain the generator parameters only. The earlier
-implementation in the repository root remains available separately.
-
-## Install
-
-Run from this directory with Python 3.11 or later:
-
-```sh
-python -m pip install -r requirements.txt
-```
-
-Install a PyTorch build appropriate for the chosen CPU or CUDA device.
+The files in `weights/` contain generator parameters. Keep each weight file with its corresponding configuration and network code.
 
 ## Inference
 
-Arrays have `C,Y,X` or `T,C,Y,X` axes. In normalized mode, supply the selected
-inputs in the order listed in the configuration. The output is a float32
-`T,K,Y,X` array; its JSON sidecar gives the component names and units. No display
-window, spatial filter or output suppression is applied.
+The following commands run from the repository root after installing `shared_models/requirements.txt`.
 
 ```sh
-python infer.py --model static --input examples/static_input.npy --output outputs/static.npy --device cpu
-python infer.py --model live --input input.npy --output outputs/live_four.npy --panel 1,1,1,1,0 --device cpu
-python infer.py --model cells --input input.npy --output outputs/cells.npy --device cpu
-python infer.py --model ecoli --input input.npy --output outputs/ecoli.npy --device cpu
+python shared_models/infer.py --model static --input TestDATA/data_561_532_488_0001.tif --mode raw --output outputs/static.tif
+python shared_models/infer.py --model live --input TestDATA/live_cells/four_colour_cell01_cycle0001.tif --mode raw --panel 1,1,1,1,0 --output outputs/live_four.tif
+python shared_models/infer.py --model live --input TestDATA/live_cells/five_colour_selected_cycle0073.tif --mode raw --panel 1,1,1,1,1 --offset 255,256,295 --output outputs/live_five.tif
+python shared_models/infer.py --model cells --input TestDATA/external_cells/NIH3T3_field33_three_bands.npy --mode raw --output outputs/cells.tif
+python shared_models/infer.py --model ecoli --input TestDATA/ecoli/Ecoli_mixture_five_bands.tif --mode raw --output outputs/ecoli.tif
 ```
 
-For raw laboratory images, add `--mode raw`. Full eight-channel stacks are
-selected into A channels automatically, in the order 561, 532 and 488 nm. Raw
-three-channel stacks must already follow that order. Subtraction and scaling
-follow the selected configuration. The five-colour live acquisition has its own
-offsets, given in `configs/live.json`; pass its three selected offsets with
-`--offset` when processing that acquisition. For the external configurations,
-raw mode integrates the listed native emission bins and divides by the stated
-unit. The source acquisition must already use the response-calibration units.
+Input axes are `C,Y,X` or `T,C,Y,X`. Laboratory inputs are ordered 561, 532 and 488 nm. Raw inputs are prepared using the offsets and scale in the configuration; `--offset` overrides the selected-channel offsets. Normalized inputs must already contain the selected bands and must have completed this preparation.
 
-The fixed-cell model uses the three acquired input images and retains all five
-outputs, including non-target signal. It does not require a staining-panel
-vector. Its signal-conditioned readout is included in the supplied generator.
-The live-cell model receives the experimental staining panel through `--panel`;
-use `1,1,1,1,0` for four-colour data and `1,1,1,1,1` for five-colour data.
+The fixed-cell model uses all five output channels without a staining-panel input. The live-cell model takes the experimental panel through `--panel`: four-colour data use `1,1,1,1,0`, and five-colour data use `1,1,1,1,1`. All five output images are retained.
 
-## Self-supervised training interface
+The external-cell model uses 128-pixel tiles with 64-pixel overlap and a positive Hann window. E. coli uses non-overlapping 512-pixel tiles. These settings match the native-image application routines. They can be overridden with `--tile-size` and `--tile-overlap`; `--tile-size 0` uses a full frame.
 
-`train.py` accepts observation-only NPZ batches. Required keys are `observed`,
-`input_a` and `prior`. Paired-branch configurations additionally use `input_b`;
-the live-cell configuration uses `panel`. Cell-panel batches include `sigma_DN`
-and `shot_alpha`. Arrays may contain a batch axis or one sample. `prior` is an
-independently sampled, unlabelled image pool in normalized abundance units,
-processed on the same spatial grid as the observations. It is not the source
-component image used to generate that observation.
+Outputs are float32 TIFF or NPY arrays with `T,K,Y,X` axes. A JSON sidecar gives component names, units and the weight identifier. No display contrast, intensity renormalization or output suppression is applied.
 
-Eight-channel observation and input arrays are normalized by the configured
-unit. Cell-panel `observed` arrays are quantized count-domain observations;
-their A/B inputs are normalized. E. coli batches contain 83 normalized
-observations and five integrated normalized inputs. The calibrated likelihood
-tables are included in `calibration/`.
+## Run the example collection
+
+```sh
+python shared_models/run_examples.py --list
+python shared_models/run_examples.py --model static --output outputs/static_examples
+python shared_models/run_examples.py --output outputs/all_examples
+```
+
+Each example is paired with its own input mode, model and acquisition settings. The batch runner loads each model once and writes separate component stacks. It does not overwrite an existing output directory.
+
+`examples/` also contains small normalized input arrays for interface testing. The single-channel files in `examples/own_single_stain/` form a small laboratory texture-library subset for the training example.
+
+## Self-supervised training
+
+Run from `shared_models/`:
 
 ```sh
 python make_example.py --model static --library examples/own_single_stain --output examples/static_batches
 python train.py --model static --data examples/static_batches --output training_runs/static --steps 4 --device cpu
 ```
 
-The compact example generator illustrates the data interface. It is not the
-acquisition-specific sampler used to obtain the supplied weights. The trainer
-supports observation-based fine-tuning or fresh initialization, uses no
-component GT or NNLS teacher, and never reads evaluation references. Starting
-from published generator weights creates fresh optimizers; it is fine-tuning,
-not restoration of a historical optimizer trajectory. Supply independently
-prepared batches and their actual acquisition calibration for a scientific
-training comparison.
+Training batches provide `observed`, `input_a` and an independently sampled `prior`; paired-branch models also use `input_b`. Live-cell batches provide `panel`, and external-cell batches provide `sigma_DN` and `shot_alpha`. Full reconstruction observations contain eight laboratory channels, 28 external-cell channels or 83 calibrated E. coli observations. The inference-only files in TestDATA are not complete training batches.
 
-`gan=False` selects an observation-only batch. All output channels share one
-discriminator. The adversarial gradient
-is capped at 10% of the observation-gradient norm, followed by generator
-gradient clipping at 1. The four observation objectives and their numerical
-constants are implemented in `physmi/losses.py` and `physmi/cells_loss.py`.
+The trainer supports fresh initialization and fine-tuning on prepared observation batches, with spectral reconstruction and one shared image discriminator. Component GT and NNLS images are not training inputs. The compact example generator illustrates the batch interface using independent single-stain textures. Acquisition-specific simulations use their calibrated noise and intensity distributions.
 
-## Single-component evaluation
+## Software tests
+
+From the repository root:
 
 ```sh
-python evaluate.py prediction_KYX.npy reference_KYX.npy --active 1 --output statistics.json
+python -m unittest discover -s shared_models/tests -v
 ```
 
-The evaluation retains every output. It reports non-target signal over the
-entire FOV, target-intensity retention and the spatial regression of each
-output on the single-component reference. A non-target background floor and
-a copied source texture are therefore visible as different quantities.
-
-## Files
-
-Run the CPU interface tests with `python -m unittest discover -s tests`.
-The example directory includes five laboratory single-stain textures and four
-simulated inputs with their expected outputs. These five textures are an
-example subset, not the complete single-stain image library.
-
-`configs/` defines component order, measured bins, response matrices, input
-units, offsets and selected training constants. `physmi/` contains the network,
-conditioning layers and objectives. `weights/` contains the four corresponding
-generators. A configuration and weight file must be used together. Colour
-assignments and manuscript display contrast are presentation choices and are
-not applied by inference.
+The tests check all four model interfaces, input preparation, full-frame and overlap inference, and TIFF/NPY output. Numerical calibration tables are in `calibration/`; component order, band selections and input scales are in `configs/`.

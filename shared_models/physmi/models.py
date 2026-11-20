@@ -77,7 +77,9 @@ def predict(model,image,c,panel=None,branch='A'):
 def prepare_input(array,c,mode='normalized',offset=None):
     import numpy as np
     a=np.asarray(array,dtype=np.float32)
+    if mode not in ('raw','normalized'):raise ValueError('Mode must be raw or normalized')
     if a.ndim not in (3,4):raise ValueError('Input must have CHW or TCHW axes')
+    if any(s<=0 for s in a.shape) or not np.isfinite(a).all():raise ValueError('Input must be nonempty and finite')
     axis=a.ndim-3
     if mode=='normalized':
         if a.shape[axis]!=c['input_channels']:raise ValueError('Normalized input must already contain selected A channels')
