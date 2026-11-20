@@ -4,7 +4,7 @@ Four configurations share the feature backbone and an unlabelled image prior. Ea
 
 | Configuration | Application | Inputs | Outputs |
 |---|---|---:|---:|
-| `static` | Laboratory fixed cells and structure–spectrum reassignment | 3 excitation channels | 5 |
+| `static` | Fig4 and crosstalk| 3 excitation channels | 5 |
 | `live` | Laboratory four- and five-colour live cells | 3 excitation channels | 5 |
 | `cells` | NIH-3T3 five-organelle data | 3 integrated emission bands | 5 |
 | `ecoli` | 13-dye E. coli data | 5 integrated emission bands | 13 |
