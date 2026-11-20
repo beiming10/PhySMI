@@ -25,8 +25,10 @@ def main():
     image=prepare_input(image,c,a.mode,[float(x) for x in a.offset.split(',')] if a.offset else None)
     if image.ndim==3:image=image[None]
     panel=None
+    if a.panel and not c['known_panel']:
+        p.error('--panel is used only by models with staining-panel conditioning')
     if c['known_panel']:
-        if not a.panel:p.error('--panel is required for static and live models')
+        if not a.panel:p.error('--panel is required for the live-cell model')
         panel=torch.tensor([[float(x) for x in a.panel.split(',')]],device=a.device)
         if panel.shape!=(1,len(c['components'])) or not torch.all((panel==0)|(panel==1)):p.error('Invalid panel')
     model=build_model(c,device=a.device,weight_path=a.weights).eval();outputs=[]

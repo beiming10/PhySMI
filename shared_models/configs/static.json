@@ -69,7 +69,7 @@
   "input_channels": 3,
   "reconstruction_channels": 8,
   "weight": "weights/static.pt",
-  "weight_SHA256": "c5a06b657e3d9c156aa6c38df9e64944f407516bd3baf12337b04a516bc46b99",
+  "weight_SHA256": "52a6c33acb5bab3bea1933c3ae6023a446014a35ab8edbbce4af4b52f1acd3ab",
   "A": [
     0,
     3,
@@ -90,23 +90,24 @@
     210.0,
     210.0
   ],
-  "default_panel": 31,
-  "known_panel": true,
+  "known_panel": false,
+  "architecture": "static_spectral_readout",
   "training": {
-    "seed": 2026111818,
+    "seed": 2026111861,
     "batch": 2,
     "patch": 256,
-    "steps": 20000,
+    "steps": 8000,
     "warmup": 0,
-    "LR_start": 5e-06,
-    "LR_end": 1e-06,
-    "branch_LR_multiplier": 200.0,
-    "absence_LR_multiplier": 2000.0,
+    "LR_start": 2e-05,
+    "LR_end": 2e-06,
+    "head_LR_start": 0.0005,
+    "head_LR_end": 2e-05,
+    "D_LR_start": 5e-06,
     "routes": [
       "real_full5",
-      "own_single_full5",
+      "alternate_full5_and_single",
       "real_source_swap",
-      "own_single_all32"
+      "alternate_all32_and_local_nucleus_lipid"
     ],
     "route_probabilities": [
       0.25,

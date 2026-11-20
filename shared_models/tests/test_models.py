@@ -18,12 +18,20 @@ class ModelInterfaces(unittest.TestCase):
                 panel=torch.ones(1,5) if c['known_panel'] else None
                 with torch.inference_mode():_,out=predict(model,torch.from_numpy(image[None]),c,panel)
                 np.testing.assert_allclose(out[0].numpy()*c['unit'],expected,rtol=1e-5,atol=1e-5)
-    def test_known_panel_retains_five_outputs(self):
+    def test_static_retains_five_unconditioned_outputs(self):
         c=load_config('static');model=build_model(c).eval()
-        with torch.inference_mode():_,out=predict(model,torch.zeros(1,3,128,128),c,torch.tensor([[0,1,0,0,0.]]))
+        self.assertFalse(c['known_panel'])
+        with torch.inference_mode():_,out=predict(model,torch.zeros(1,3,128,128),c)
         self.assertEqual(tuple(out.shape),(1,5,128,128))
         self.assertTrue(torch.isfinite(out).all())
-        self.assertGreater(float(out[:,[0,2,3,4]].sum()),0.)
+        self.assertTrue(any(k.startswith('readout.context.') for k in model.state_dict()))
+    def test_static_does_not_use_panel_metadata(self):
+        c=load_config('static');model=build_model(c).eval()
+        image=torch.from_numpy(np.load(ROOT/'examples/static_input.npy')[None])
+        with torch.inference_mode():
+            _,a=predict(model,image,c)
+            _,b=predict(model,image,c,torch.tensor([[0,1,0,0,0.]]))
+        self.assertTrue(torch.equal(a,b))
     def test_raw_selected_and_full_agree(self):
         for name in ['static','live']:
             c=load_config(name);full=np.arange(8*16*16,dtype=np.float32).reshape(8,16,16)

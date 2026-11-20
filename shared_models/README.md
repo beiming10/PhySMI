@@ -32,7 +32,7 @@ inputs in the order listed in the configuration. The output is a float32
 window, spatial filter or output suppression is applied.
 
 ```sh
-python infer.py --model static --input examples/static_input.npy --output outputs/static.npy --panel 1,1,1,1,1 --device cpu
+python infer.py --model static --input examples/static_input.npy --output outputs/static.npy --device cpu
 python infer.py --model live --input input.npy --output outputs/live_four.npy --panel 1,1,1,1,0 --device cpu
 python infer.py --model cells --input input.npy --output outputs/cells.npy --device cpu
 python infer.py --model ecoli --input input.npy --output outputs/ecoli.npy --device cpu
@@ -47,15 +47,17 @@ offsets, given in `configs/live.json`; pass its three selected offsets with
 raw mode integrates the listed native emission bins and divides by the stated
 unit. The source acquisition must already use the response-calibration units.
 
-The fixed-cell and live-cell models receive a known experimental staining
-panel. For a nucleus-only control use `--panel 0,1,0,0,0`. This vector conditions
-the network. All five output images are retained, including non-target output.
+The fixed-cell model uses the three acquired input images and retains all five
+outputs, including non-target signal. It does not require a staining-panel
+vector. Its signal-conditioned readout is included in the supplied generator.
+The live-cell model receives the experimental staining panel through `--panel`;
+use `1,1,1,1,0` for four-colour data and `1,1,1,1,1` for five-colour data.
 
 ## Self-supervised training interface
 
 `train.py` accepts observation-only NPZ batches. Required keys are `observed`,
 `input_a` and `prior`. Paired-branch configurations additionally use `input_b`;
-laboratory configurations use `panel`. Cell-panel batches include `sigma_DN`
+the live-cell configuration uses `panel`. Cell-panel batches include `sigma_DN`
 and `shot_alpha`. Arrays may contain a batch axis or one sample. `prior` is an
 independently sampled, unlabelled image pool in normalized abundance units,
 processed on the same spatial grid as the observations. It is not the source
@@ -81,10 +83,8 @@ not restoration of a historical optimizer trajectory. Supply independently
 prepared batches and their actual acquisition calibration for a scientific
 training comparison.
 
-For the fixed-cell model, batches marked `condition_only=True` update only
-the branch and absent-panel gains, retaining the complete-panel A mapping.
-Other batches update the image model. `gan=False` selects an observation-only
-batch. All output channels share one discriminator. The adversarial gradient
+`gan=False` selects an observation-only batch. All output channels share one
+discriminator. The adversarial gradient
 is capped at 10% of the observation-gradient norm, followed by generator
 gradient clipping at 1. The four observation objectives and their numerical
 constants are implemented in `physmi/losses.py` and `physmi/cells_loss.py`.

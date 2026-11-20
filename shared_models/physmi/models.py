@@ -67,9 +67,11 @@ def build_model(config,weights=True,device='cpu',weight_path=None):
 def predict(model,image,c,panel=None,branch='A'):
     if image.ndim!=4 or image.shape[1]!=c['input_channels']:
         raise ValueError('Incorrect number of measured inputs')
-    if c['name'] in ('static','live'):
+    if c['name']=='static':
+        return model(image,branch=0 if branch=='A' else 1)
+    if c['name']=='live':
         if panel is None:raise ValueError('Supply the experimental staining-panel vector')
-        return model(image,panel,branch=0 if branch=='A' else 1) if c['name']=='static' else model(image,panel)
+        return model(image,panel)
     return model(image,branch) if c['name']=='cells' else model(image)
 
 def prepare_input(array,c,mode='normalized',offset=None):

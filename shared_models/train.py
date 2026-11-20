@@ -28,7 +28,7 @@ def main():
     critic=StCDiscriminator(in_channels=1,ndf=64,n_layers=3).to(a.device)
     schedule=c['training'];lr0=schedule.get('LR_start',2e-4);lr1=schedule.get('LR_end',4e-5)
     groups=[{'params':[v for n,v in model.named_parameters() if v.requires_grad and n not in ['branch_film','absence_log_gain']], 'lr_multiplier':1.}]
-    if a.model=='static':
+    if a.model=='static' and c['known_panel']:
         groups.extend([{'params':[model.branch_film],'lr_multiplier':schedule['branch_LR_multiplier']},
                        {'params':[model.absence_log_gain],'lr_multiplier':schedule['absence_LR_multiplier']}])
     for group in groups:group['lr']=lr0*group['lr_multiplier']
@@ -47,7 +47,8 @@ def main():
         if b['observed'].ndim==3:
             b={k:(v[None] if k in ['observed','input_a','input_b','prior','panel','sigma_DN'] else v) for k,v in b.items()}
         panel=b.get('panel');cond_only=bool(b.get('condition_only',torch.tensor(False)).item())
-        if cond_only and a.model!='static':raise ValueError('Condition-only update belongs to the fixed-cell model')
+        if cond_only and not (a.model=='static' and c['known_panel']):
+            raise ValueError('Condition-only batches are not supported by this model')
         for name,v in model.named_parameters():v.requires_grad_(name in original_trainable and (not cond_only or name in ['branch_film','absence_log_gain']))
         # An exception restores the complete pre-batch transaction and stops.
         snapshot=copy.deepcopy([o.state_dict() for o in [model,critic,opt,dopt]])
