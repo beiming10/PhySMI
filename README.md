@@ -2,9 +2,11 @@
 
 Physics-informed self-supervised multiplexed fluorescence imaging.
 
-![PhySMI: three measured channels to five resolved cellular structures](assets/physmi-showcase.gif)
+![PhySMI highlights from the main figures](assets/physmi-paper-highlights.gif)
 
-Developed by **Yisher ([@Yisher](https://github.com/Yisher))**.
+Selected results from Figs. 3–6 of the paper.
+
+Paper author and code developer: **J. Xia ([@Yisher](https://github.com/Yisher))**.
 
 PhySMI combines spectral reconstruction, a shared cellular-image prior and cross-branch denoising. The current implementation and four pretrained models are in [shared_models](shared_models/).
 
