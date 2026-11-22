@@ -9,8 +9,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -18,7 +18,7 @@
         532,
         488
       ],
-      "sha256": "9ac827e163da563115e66b0cfb08a7183306b2a685178c77e2e5d6050f3202f8"
+      "sha256": "036e3e473601e59296dcc8cbef4ad58f8edb1a91fe8fcc42cb0fe45d28f07378"
     },
     {
       "id": "fixed_cell_02",
@@ -29,8 +29,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -38,7 +38,7 @@
         532,
         488
       ],
-      "sha256": "61231c75c53dbde30923f8f5ab333f832c8dacce7b2d735a59841ba52f34f037"
+      "sha256": "b9c05a7f1dd2dbe4ef58581b9d9add7aac9e45f7459920239be284088ff4c6df"
     },
     {
       "id": "fixed_cell_03",
@@ -49,8 +49,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -58,7 +58,7 @@
         532,
         488
       ],
-      "sha256": "4df25aae0ac994a74c1fef4e148915b1c0aaaa41a5758ac8b17184f832dc8a5a"
+      "sha256": "567b7b262a2c36f2bcc4cc88c36a365a7d7e27cf4edcc79f4ff347e4521cac7e"
     },
     {
       "id": "fixed_cell_04",
@@ -69,8 +69,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -78,7 +78,7 @@
         532,
         488
       ],
-      "sha256": "d761d22bf75b1b33f8d406a0d3a94b3a96b87b1f9b3762bc5507d14a0fbc61bb"
+      "sha256": "47d3b5cb160a969d74b9f437f1c24c3a4377790ab4576a0338d7d6e8acde8043"
     },
     {
       "id": "fixed_cell_05",
@@ -89,8 +89,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -98,7 +98,7 @@
         532,
         488
       ],
-      "sha256": "a8275d2024181eff46b085d95e859d954ce30bbb975b7e9feaaa5fe4c871eb15"
+      "sha256": "e04c6894b1a4bd7e15b7510816ae5fab19b6342d1f53db7ff2feefb99676ecd1"
     },
     {
       "id": "fixed_cell_06",
@@ -109,8 +109,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -118,7 +118,7 @@
         532,
         488
       ],
-      "sha256": "4f6750636d3f6299a5f9271852e5e3b869093b6e94c23b2da53ecc3f96744167"
+      "sha256": "5ac0d02e6a51eb77dd2a9ba8fd9a4ce1fb373deab6d14d352d08ff4679ec0e8c"
     },
     {
       "id": "fixed_cell_07",
@@ -129,8 +129,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -138,7 +138,7 @@
         532,
         488
       ],
-      "sha256": "5045e12dc0f206686415df3573bb2c842af381ac259dabc36f924f4ce50cc6fc"
+      "sha256": "b5583cc9df610474ed938a3b3361dadbe428e960d50cf1073b0842196714910e"
     },
     {
       "id": "fixed_cell_08",
@@ -149,8 +149,8 @@
       "axes": "CYX",
       "shape": [
         3,
-        256,
-        256
+        512,
+        512
       ],
       "dtype": "uint16",
       "excitation_nm": [
@@ -158,7 +158,7 @@
         532,
         488
       ],
-      "sha256": "64832c8b2012133bd6f81ab8761de27db9e6ab282602e524b16960e3f729d54d"
+      "sha256": "bd7cfaba636d55ed923ac02a791c03e154db199e55d36dc5d21e089d0361b69c"
     },
     {
       "id": "Mito",
