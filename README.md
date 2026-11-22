@@ -52,7 +52,7 @@ The external-cell and E. coli configurations define the emission bins integrated
 
 Predictions are float32 TIFF or NPY arrays. The accompanying JSON identifies component order and units. Inference applies no display contrast or spatial post-filter.
 
-See [shared_models/README.md](shared_models/README.md) for live-cell examples, tiling options, self-supervised training and interface tests. Earlier scripts in the repository root are retained for the earlier implementation; the commands above use the current models.
+See [shared_models/README.md](shared_models/README.md) for live-cell examples, tiling options, self-supervised training and interface tests.
 
 ## Acknowledgements
 
