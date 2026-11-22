@@ -1,4 +1,4 @@
-"""Quantized, censored observation likelihood for the cell panel."""
+"""Quantized, censored observation likelihood."""
 def objective(c,xa,xb,y,matrix,sig,alpha,input_b):
  import torch
  import torch.nn.functional as F

@@ -1,4 +1,4 @@
-"""Smooth nonnegative13-dye head; no hard floor, clamp or presence mask."""
+"""Smooth independent nonnegative component head."""
 import torch
 import torch.nn.functional as F
 from .core import UnmixingHead

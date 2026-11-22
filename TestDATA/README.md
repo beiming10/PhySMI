@@ -27,8 +27,9 @@ an application. An individual example can be selected with `--id Mito`, for
 example. The runner uses the settings in [examples.json](examples.json),
 including the different acquisition offsets for the five-colour live cell.
 
-TIFF files retain acquisition-unit intensities. Single-stain TIFFs are means
-of repeated acquisitions. The structure–spectrum reassignment NPY files are
+All supplied input images are TIFF files. Acquired inputs retain
+acquisition-unit intensities; single-stain inputs are means of repeated
+acquisitions. The structure–spectrum reassignment TIFF files are
 normalized observations constructed from acquired cell images. No contrast
 stretch is applied to these test inputs. All five fixed-cell outputs remain
 enabled when a single-stain field is processed.

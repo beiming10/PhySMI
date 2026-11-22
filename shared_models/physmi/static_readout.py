@@ -1,4 +1,4 @@
-"""Bias-free, signal-conditioned readout from three acquired input bands."""
+"""Bias-free, signal-conditioned readout."""
 import torch
 from torch import nn
 from torch.nn import functional as F

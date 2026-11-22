@@ -1,4 +1,4 @@
-"""Run one of the four fixed spectral-panel models on CHW/TCHW images."""
+"""Run a configured model on channel-first image arrays."""
 import argparse
 from pathlib import Path
 import json

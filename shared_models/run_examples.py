@@ -1,4 +1,4 @@
-"""Run the supplied input files with their matching models and acquisition settings."""
+"""Run input files with their configured models."""
 import argparse,json,re
 from pathlib import Path
 import torch

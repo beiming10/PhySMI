@@ -1,4 +1,4 @@
-"""Single-component controls with all model outputs retained."""
+"""Evaluate component responses with all model outputs retained."""
 import argparse,json
 from pathlib import Path
 import numpy as np

@@ -18,7 +18,7 @@ class ModelInterfaces(unittest.TestCase):
         for name in ['static','live','cells','ecoli']:
             with self.subTest(model=name):
                 c=load_config(name);model=build_model(c).eval()
-                image=np.load(ROOT/'examples'/(name+'_input.npy'),allow_pickle=False)
+                image=read_input(ROOT/'examples'/(name+'_input.tif'))
                 self.assertEqual(image.shape[0],c['input_channels'])
                 panel=[1]*5 if c['known_panel'] else None
                 value=infer_array(model,image,c,panel=panel,tile_size=0)
@@ -98,6 +98,7 @@ class ModelInterfaces(unittest.TestCase):
         examples=json.loads(path.read_text(encoding='utf-8'))['examples']
         self.assertEqual(len({e['id'] for e in examples}),len(examples))
         for e in examples:
+            self.assertEqual(Path(e['file']).suffix.lower(),'.tif')
             image=read_input(path.parent/e['file'])
             expected=5 if e['model']=='ecoli' else 3
             self.assertEqual(image.ndim,3)

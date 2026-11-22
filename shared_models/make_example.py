@@ -1,8 +1,4 @@
-"""Create a small observation-only example from a user's single-stain textures.
-
-This compact generator illustrates the training data interface. It does not
-replay the acquisition-specific image sampling of the released checkpoints.
-"""
+"""Create a compact observation batch for the training interface."""
 import argparse
 from pathlib import Path
 import json
@@ -60,8 +56,7 @@ def main():
             observed=observe();ya=observe();yb=observe()
             batch.update(observed=observed,input_a=np.stack([ya[g].sum(0) for g in c['A_groups']])/unit,input_b=yb[c['B']]/unit,sigma_DN=sigma,shot_alpha=np.array(shot,np.float32))
         else:
-            # A noiseless quantized smoke-test example. Calibrated noisy training
-            # batches are supplied through the same observed83 interface.
+            # Round and clip observations before integrating the input bands.
             observed=np.floor(np.clip(clean*255,0,255)+.5)/255
             batch.update(observed=observed,input_a=np.stack([observed[g].sum(0) for g in c['A_groups']]))
         np.savez_compressed(a.output/f'example_{index:03d}.npz',**batch)

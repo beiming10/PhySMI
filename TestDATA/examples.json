@@ -412,7 +412,7 @@
     },
     {
       "id": "structure_spectrum_exchange_cell01",
-      "file": "fixed_cells/structure_spectrum_exchange_cell01.npy",
+      "file": "fixed_cells/structure_spectrum_exchange_cell01.tif",
       "model": "static",
       "mode": "normalized",
       "kind": "computational structure-spectrum reassignment of an acquired cell",
@@ -428,11 +428,11 @@
         532,
         488
       ],
-      "sha256": "5caf132bd255ba970d1f60966f8b59bba03a7c4bd2b33cce81b7da2adadb48ee"
+      "sha256": "87405b610be4d93a88774c9c7e9910a5d4cdc6c1f4561232faf61dc7cf244ce3"
     },
     {
       "id": "structure_spectrum_exchange_cell02",
-      "file": "fixed_cells/structure_spectrum_exchange_cell02.npy",
+      "file": "fixed_cells/structure_spectrum_exchange_cell02.tif",
       "model": "static",
       "mode": "normalized",
       "kind": "computational structure-spectrum reassignment of an acquired cell",
@@ -448,11 +448,11 @@
         532,
         488
       ],
-      "sha256": "d8a9bcc87257eeca610869003d5fd62792ab84e0cf19d083fcb8d89c44443ef7"
+      "sha256": "89199d697f64394d7b24d9a96791fa28308e743f5ca6b0ab6c080be85eddd5b9"
     },
     {
       "id": "NIH3T3_field33_three_bands",
-      "file": "external_cells/NIH3T3_field33_three_bands.npy",
+      "file": "external_cells/NIH3T3_field33_three_bands.tif",
       "model": "cells",
       "mode": "raw",
       "axes": "CYX",
@@ -465,7 +465,7 @@
       "kind": "integrated measured emission channels",
       "source_doi": "10.5281/zenodo.13625087",
       "license": "CC-BY-4.0",
-      "sha256": "36b8ee5fbc733139431d183aead88a6d3dfaef9413f587498fc195b8e1342ae1",
+      "sha256": "339086a00568d1e67b74b01fbae76a94c2cbee2dcdb6e6769db5f46084b0e02e",
       "source_field": "33",
       "creator": "Leonel Malacrida",
       "tile_size": 128,
@@ -473,7 +473,7 @@
     },
     {
       "id": "NIH3T3_field34_three_bands",
-      "file": "external_cells/NIH3T3_field34_three_bands.npy",
+      "file": "external_cells/NIH3T3_field34_three_bands.tif",
       "model": "cells",
       "mode": "raw",
       "axes": "CYX",
@@ -486,7 +486,7 @@
       "kind": "integrated measured emission channels",
       "source_doi": "10.5281/zenodo.13625087",
       "license": "CC-BY-4.0",
-      "sha256": "34c28761860171b6ca5affae25a01299e7eccc795c7e0e915f3425aa3904bdcc",
+      "sha256": "2fd07880f08c6496bfce9faf85263bcf7b473d52917b48e2eb9e0eb5b3baed0e",
       "source_field": "34",
       "creator": "Leonel Malacrida",
       "tile_size": 128,
@@ -494,7 +494,7 @@
     },
     {
       "id": "NIH3T3_field35_three_bands",
-      "file": "external_cells/NIH3T3_field35_three_bands.npy",
+      "file": "external_cells/NIH3T3_field35_three_bands.tif",
       "model": "cells",
       "mode": "raw",
       "axes": "CYX",
@@ -507,7 +507,7 @@
       "kind": "integrated measured emission channels",
       "source_doi": "10.5281/zenodo.13625087",
       "license": "CC-BY-4.0",
-      "sha256": "d6fac717ad1f2997d64a6c9dd3d0252ecabb0b1cd80eb27bfad400924b7c320f",
+      "sha256": "c07b60e6e9ad758e976abcc4d4fcb95a4cbc3e39b8e8f7d2c1a414bdcd343131",
       "source_field": "35",
       "creator": "Leonel Malacrida",
       "tile_size": 128,
@@ -515,7 +515,7 @@
     },
     {
       "id": "NIH3T3_field38_three_bands",
-      "file": "external_cells/NIH3T3_field38_three_bands.npy",
+      "file": "external_cells/NIH3T3_field38_three_bands.tif",
       "model": "cells",
       "mode": "raw",
       "axes": "CYX",
@@ -528,7 +528,7 @@
       "kind": "integrated measured emission channels",
       "source_doi": "10.5281/zenodo.13625087",
       "license": "CC-BY-4.0",
-      "sha256": "78318fd310d6db63082cc814503613edb6cbfb231e43b832a3a612c4ccc7d751",
+      "sha256": "31da0fc3ccb45a0b0fe275907ccba5af067b0d8a644673d3eef5ef151a5b9f84",
       "source_field": "38",
       "creator": "Leonel Malacrida",
       "tile_size": 128,
@@ -588,11 +588,26 @@
         ]
       ],
       "input_passbands_nm": [
-        [507.8224375, 543.4288125],
-        [543.4288125, 579.0351875],
-        [579.0351875, 623.54315625],
-        [650.2479375, 676.95271875],
-        [676.95271875, 694.75590625]
+        [
+          507.8224375,
+          543.4288125
+        ],
+        [
+          543.4288125,
+          579.0351875
+        ],
+        [
+          579.0351875,
+          623.54315625
+        ],
+        [
+          650.2479375,
+          676.95271875
+        ],
+        [
+          676.95271875,
+          694.75590625
+        ]
       ],
       "tile_size": 512,
       "tile_overlap": 0
