@@ -1,8 +1,8 @@
 {
   "examples": [
     {
-      "id": "Fig4a",
-      "file": "fixed_cells/Fig4a_three_channels.tif",
+      "id": "COS7_Microscope1",
+      "file": "fixed_cells/COS7_Microscope1.tif",
       "model": "static",
       "mode": "raw",
       "axes": "CYX",
@@ -17,11 +17,12 @@
         561,
         532,
         488
-      ]
+      ],
+      "figure": "Fig. 4a"
     },
     {
-      "id": "Fig4c",
-      "file": "fixed_cells/Fig4c_three_channels.tif",
+      "id": "COS7_Microscope2",
+      "file": "fixed_cells/COS7_Microscope2.tif",
       "model": "static",
       "mode": "raw",
       "axes": "CYX",
@@ -36,30 +37,12 @@
         561,
         532,
         488
-      ]
-    },
-    {
-      "id": "Fig4_exchange_01",
-      "file": "fixed_cells/Fig4_exchange_01_three_channels.tif",
-      "model": "static",
-      "mode": "normalized",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
       ],
-      "dtype": "float32",
-      "sha256": "b086b671ede5349ba3fdc0c49dcad4a21a54c4f84841cca00d7b420c4c469f52",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ]
+      "figure": "Fig. 4c"
     },
     {
-      "id": "Fig4_exchange_02",
-      "file": "fixed_cells/Fig4_exchange_02_three_channels.tif",
+      "id": "U2OS_Microscope3",
+      "file": "fixed_cells/U2OS_Microscope3.tif",
       "model": "static",
       "mode": "normalized",
       "axes": "CYX",
@@ -74,26 +57,8 @@
         561,
         532,
         488
-      ]
-    },
-    {
-      "id": "Fig4_exchange_03",
-      "file": "fixed_cells/Fig4_exchange_03_three_channels.tif",
-      "model": "static",
-      "mode": "normalized",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
       ],
-      "dtype": "float32",
-      "sha256": "43ababef0a05218c0a22c7c11a6b56025e77b3d6c8517bb62e2b17c1f7afaa20",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ]
+      "figure": "Fig. 4f"
     },
     {
       "id": "live_four_colour",

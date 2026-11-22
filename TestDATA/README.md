@@ -8,7 +8,7 @@ bands. E. coli contains five integrated emission bands.
 | Examples | Files | Model |
 |---|---:|---|
 | Fixed-cell acquisitions | 2 | `static` |
-| Structure–spectrum reassignment inputs | 3 | `static` |
+| Structure–spectrum reassignment input | 1 | `static` |
 | Four-colour live-cell sequence, first 10 frames | 1 | `live` |
 | Five-colour live-cell sequence, first 10 frames | 1 | `live` |
 | NIH-3T3 five-organelle field | 1 | `cells` |
@@ -22,7 +22,7 @@ python shared_models/run_examples.py --output outputs/test_data --device cpu
 ```
 
 Use `--model static`, `--model live`, `--model cells` or `--model ecoli` to select
-an application. An individual example can be selected with `--id Fig4a`, for
+an application. An individual example can be selected with `--id COS7_Microscope1`, for
 example. The runner uses the settings in [examples.json](examples.json),
 including the different acquisition offsets for the five-colour live cell.
 

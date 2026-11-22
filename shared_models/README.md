@@ -16,7 +16,7 @@ The files in `weights/` contain generator parameters. Keep each weight file with
 The following commands run from the repository root after installing `shared_models/requirements.txt`.
 
 ```sh
-python shared_models/infer.py --model static --input TestDATA/fixed_cells/Fig4a_three_channels.tif --mode raw --output outputs/static.tif
+python shared_models/infer.py --model static --input TestDATA/fixed_cells/COS7_Microscope1.tif --mode raw --output outputs/static.tif
 python shared_models/infer.py --model live --input TestDATA/live_cells/four_colour_first10.tif --mode raw --panel 1,1,1,1,0 --output outputs/live_four.tif
 python shared_models/infer.py --model live --input TestDATA/live_cells/five_colour_first10.tif --mode raw --panel 1,1,1,1,1 --offset 255,256,295 --output outputs/live_five.tif
 python shared_models/infer.py --model cells --input TestDATA/external_cells/NIH3T3_field33_three_bands.tif --mode raw --output outputs/cells.tif

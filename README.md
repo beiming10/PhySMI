@@ -30,7 +30,7 @@ Install the PyTorch build appropriate for your CPU or CUDA device.
 Run one fixed-cell example:
 
 ```sh
-python shared_models/infer.py --model static --input TestDATA/fixed_cells/Fig4a_three_channels.tif --mode raw --output outputs/fixed_cell.tif --device cpu
+python shared_models/infer.py --model static --input TestDATA/fixed_cells/COS7_Microscope1.tif --mode raw --output outputs/fixed_cell.tif --device cpu
 ```
 
 List the examples or run the complete collection:
