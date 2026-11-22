@@ -7,8 +7,7 @@ bands. E. coli contains five integrated emission bands.
 
 | Examples | Files | Model |
 |---|---:|---|
-| Fixed-cell acquisitions | 2 | `static` |
-| Structure–spectrum reassignment input | 1 | `static` |
+| Fixed-cell inputs | 3 | `static` |
 | Four-colour live-cell sequence, first 10 frames | 1 | `live` |
 | Five-colour live-cell sequence, first 10 frames | 1 | `live` |
 | NIH-3T3 five-organelle field | 1 | `cells` |
