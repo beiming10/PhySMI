@@ -101,8 +101,8 @@ class ModelInterfaces(unittest.TestCase):
             self.assertEqual(Path(e['file']).suffix.lower(),'.tif')
             image=read_input(path.parent/e['file'])
             expected=5 if e['model']=='ecoli' else 3
-            self.assertEqual(image.ndim,3)
-            self.assertEqual(image.shape[0],expected)
+            self.assertIn(image.ndim,(3,4))
+            self.assertEqual(image.shape[-3],expected)
             self.assertTrue(np.isfinite(image).all())
 
 

@@ -1,18 +1,17 @@
 # Test inputs
 
 This collection contains input images for the four public models. Laboratory
-fixed-cell, single-stain and live-cell files have three channels in the order
+fixed-cell and live-cell files have three channels in the order
 **561, 532, 488 nm**. External NIH-3T3 inputs contain three integrated emission
 bands. E. coli contains five integrated emission bands.
 
 | Examples | Files | Model |
 |---|---:|---|
-| Fixed-cell acquisitions | 8 | `static` |
-| Structure–spectrum reassignment inputs | 2 | `static` |
-| Experimental single-stain fields | 5 | `static` |
-| Four-colour live-cell snapshots | 4 | `live` |
-| Five-colour live-cell snapshot | 1 | `live` |
-| NIH-3T3 five-organelle fields | 4 | `cells` |
+| Fixed-cell acquisitions | 2 | `static` |
+| Structure–spectrum reassignment inputs | 3 | `static` |
+| Four-colour live-cell sequence, first 10 frames | 1 | `live` |
+| Five-colour live-cell sequence, first 10 frames | 1 | `live` |
+| NIH-3T3 five-organelle field | 1 | `cells` |
 | E. coli mixed field | 1 | `ecoli` |
 
 Run from the repository root:
@@ -23,20 +22,20 @@ python shared_models/run_examples.py --output outputs/test_data --device cpu
 ```
 
 Use `--model static`, `--model live`, `--model cells` or `--model ecoli` to select
-an application. An individual example can be selected with `--id Mito`, for
+an application. An individual example can be selected with `--id Fig4a`, for
 example. The runner uses the settings in [examples.json](examples.json),
 including the different acquisition offsets for the five-colour live cell.
 
 All supplied input images are TIFF files. Acquired inputs retain
-acquisition-unit intensities; single-stain inputs are means of repeated
-acquisitions. The structure–spectrum reassignment TIFF files are
+acquisition-unit intensities. Live-cell stacks use `T,C,Y,X` axes; other
+inputs use `C,Y,X`. The structure–spectrum reassignment TIFF files are
 normalized observations constructed from acquired cell images. No contrast
 stretch is applied to these test inputs. All five fixed-cell outputs remain
-enabled when a single-stain field is processed.
+enabled.
 
 ## External data attribution
 
-The four NIH-3T3 examples derive from Leonel Malacrida's
+The NIH-3T3 example derives from Leonel Malacrida's
 [Phasor-based multi-harmonic unmixing for in-vivo hyperspectral imaging](https://doi.org/10.5281/zenodo.13625087).
 The native emission observations were integrated into three bands using the
 selections in `shared_models/configs/cells.json`.

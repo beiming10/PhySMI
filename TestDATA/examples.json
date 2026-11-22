@@ -1,11 +1,10 @@
 {
   "examples": [
     {
-      "id": "fixed_cell_01",
-      "file": "data_561_532_488_0001.tif",
+      "id": "Fig4a",
+      "file": "fixed_cells/Fig4a_three_channels.tif",
       "model": "static",
       "mode": "raw",
-      "kind": "fixed-cell acquisition",
       "axes": "CYX",
       "shape": [
         3,
@@ -13,19 +12,18 @@
         512
       ],
       "dtype": "uint16",
+      "sha256": "c42bd939e7414289609d0170ce0a0ab7d6d59d7b7aeb441f63d8f5a4f079a432",
       "excitation_nm": [
         561,
         532,
         488
-      ],
-      "sha256": "036e3e473601e59296dcc8cbef4ad58f8edb1a91fe8fcc42cb0fe45d28f07378"
+      ]
     },
     {
-      "id": "fixed_cell_02",
-      "file": "data_561_532_488_0002.tif",
+      "id": "Fig4c",
+      "file": "fixed_cells/Fig4c_three_channels.tif",
       "model": "static",
       "mode": "raw",
-      "kind": "fixed-cell acquisition",
       "axes": "CYX",
       "shape": [
         3,
@@ -33,257 +31,84 @@
         512
       ],
       "dtype": "uint16",
+      "sha256": "1e783984ec00121a5334da08e8948f9730928e13f6e2326e9cb792da72f814ae",
       "excitation_nm": [
         561,
         532,
         488
-      ],
-      "sha256": "b9c05a7f1dd2dbe4ef58581b9d9add7aac9e45f7459920239be284088ff4c6df"
+      ]
     },
     {
-      "id": "fixed_cell_03",
-      "file": "data_561_532_488_0003.tif",
+      "id": "Fig4_exchange_01",
+      "file": "fixed_cells/Fig4_exchange_01_three_channels.tif",
       "model": "static",
-      "mode": "raw",
-      "kind": "fixed-cell acquisition",
+      "mode": "normalized",
       "axes": "CYX",
       "shape": [
         3,
         512,
         512
       ],
-      "dtype": "uint16",
+      "dtype": "float32",
+      "sha256": "b086b671ede5349ba3fdc0c49dcad4a21a54c4f84841cca00d7b420c4c469f52",
       "excitation_nm": [
         561,
         532,
         488
-      ],
-      "sha256": "567b7b262a2c36f2bcc4cc88c36a365a7d7e27cf4edcc79f4ff347e4521cac7e"
+      ]
     },
     {
-      "id": "fixed_cell_04",
-      "file": "data_561_532_488_0004.tif",
+      "id": "Fig4_exchange_02",
+      "file": "fixed_cells/Fig4_exchange_02_three_channels.tif",
       "model": "static",
-      "mode": "raw",
-      "kind": "fixed-cell acquisition",
+      "mode": "normalized",
       "axes": "CYX",
       "shape": [
         3,
         512,
         512
       ],
-      "dtype": "uint16",
+      "dtype": "float32",
+      "sha256": "c955c70f44d0364a6e8523628c93e483f4c5734bc5bae41602f9b9138cfc31ec",
       "excitation_nm": [
         561,
         532,
         488
-      ],
-      "sha256": "47d3b5cb160a969d74b9f437f1c24c3a4377790ab4576a0338d7d6e8acde8043"
+      ]
     },
     {
-      "id": "fixed_cell_05",
-      "file": "data_561_532_488_0005.tif",
+      "id": "Fig4_exchange_03",
+      "file": "fixed_cells/Fig4_exchange_03_three_channels.tif",
       "model": "static",
-      "mode": "raw",
-      "kind": "fixed-cell acquisition",
+      "mode": "normalized",
       "axes": "CYX",
       "shape": [
         3,
         512,
         512
       ],
-      "dtype": "uint16",
+      "dtype": "float32",
+      "sha256": "43ababef0a05218c0a22c7c11a6b56025e77b3d6c8517bb62e2b17c1f7afaa20",
       "excitation_nm": [
         561,
         532,
         488
-      ],
-      "sha256": "e04c6894b1a4bd7e15b7510816ae5fab19b6342d1f53db7ff2feefb99676ecd1"
+      ]
     },
     {
-      "id": "fixed_cell_06",
-      "file": "data_561_532_488_0006.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "fixed-cell acquisition",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "5ac0d02e6a51eb77dd2a9ba8fd9a4ce1fb373deab6d14d352d08ff4679ec0e8c"
-    },
-    {
-      "id": "fixed_cell_07",
-      "file": "data_561_532_488_0007.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "fixed-cell acquisition",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "b5583cc9df610474ed938a3b3361dadbe428e960d50cf1073b0842196714910e"
-    },
-    {
-      "id": "fixed_cell_08",
-      "file": "data_561_532_488_0008.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "fixed-cell acquisition",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "bd7cfaba636d55ed923ac02a791c03e154db199e55d36dc5d21e089d0361b69c"
-    },
-    {
-      "id": "Mito",
-      "file": "single_stain/Mito.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "experimental single-stain repeated-acquisition mean",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "1bdbe5a5c7c301120ffacf72327ece1a081d3e05df03225c537c5e6cf9cbc307",
-      "labelled_structure": "Mito"
-    },
-    {
-      "id": "Nucleus",
-      "file": "single_stain/Nucleus.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "experimental single-stain repeated-acquisition mean",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "819cba4dee2e986b83ce6c757b9991d660bab32f77e4e93c629d349a37cd7a7d",
-      "labelled_structure": "Nucleus"
-    },
-    {
-      "id": "LDs",
-      "file": "single_stain/LDs.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "experimental single-stain repeated-acquisition mean",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "9fc2d8605b74e23df22eb5a7589085283a7bdcc5eaffc5e46cfa199ca5028442",
-      "labelled_structure": "LDs"
-    },
-    {
-      "id": "Tubulin",
-      "file": "single_stain/Tubulin.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "experimental single-stain repeated-acquisition mean",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "ff625b8379e12b8e29054b07d6d4af520200b8d2234b0c9c721ebadbfa0f15e0",
-      "labelled_structure": "Tubulin"
-    },
-    {
-      "id": "Actin",
-      "file": "single_stain/Actin.tif",
-      "model": "static",
-      "mode": "raw",
-      "kind": "experimental single-stain repeated-acquisition mean",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "100ff5baa304aa7ef0af847f27207fb4e8edc59b77a1420a161d49f172973a38",
-      "labelled_structure": "Actin"
-    },
-    {
-      "id": "four_colour_cell01_cycle0001",
-      "file": "live_cells/four_colour_cell01_cycle0001.tif",
+      "id": "live_four_colour",
+      "file": "live_cells/four_colour_first10.tif",
       "model": "live",
       "mode": "raw",
-      "kind": "native three-channel four-colour acquisition",
-      "axes": "CYX",
+      "axes": "TCYX",
       "shape": [
+        10,
         3,
         512,
         512
       ],
       "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "cbb8f1a96599914e47264854301e579b0c2bb2355dbfceee9c29c00922baa746",
+      "sha256": "f582dfed30d9a0f36d69d49a32fb9347d2887832956969ea1cdf4e2dd8c67c04",
       "panel": [
         1,
         1,
@@ -291,111 +116,26 @@
         1,
         0
       ],
-      "cycle_one_based": 1
+      "excitation_nm": [
+        561,
+        532,
+        488
+      ]
     },
     {
-      "id": "four_colour_cell01_cycle0400",
-      "file": "live_cells/four_colour_cell01_cycle0400.tif",
+      "id": "live_five_colour",
+      "file": "live_cells/five_colour_first10.tif",
       "model": "live",
       "mode": "raw",
-      "kind": "native three-channel four-colour acquisition",
-      "axes": "CYX",
+      "axes": "TCYX",
       "shape": [
+        10,
         3,
         512,
         512
       ],
       "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "d5ebb6b2599f78b64a07cb993e59cc594a8758429d100f3d98a34fa8f4bb3c05",
-      "panel": [
-        1,
-        1,
-        1,
-        1,
-        0
-      ],
-      "cycle_one_based": 400
-    },
-    {
-      "id": "four_colour_cell03_cycle0001",
-      "file": "live_cells/four_colour_cell03_cycle0001.tif",
-      "model": "live",
-      "mode": "raw",
-      "kind": "native three-channel four-colour acquisition",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "039aee38ffa4888c0eeaaf3468582b00db9bea66ead6f7bce6ad5c7d70fbb7f7",
-      "panel": [
-        1,
-        1,
-        1,
-        1,
-        0
-      ],
-      "cycle_one_based": 1
-    },
-    {
-      "id": "four_colour_cell03_cycle0400",
-      "file": "live_cells/four_colour_cell03_cycle0400.tif",
-      "model": "live",
-      "mode": "raw",
-      "kind": "native three-channel four-colour acquisition",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "0f3ca516c54201d0b64c0cb64ee2eafb592789dda638f5ae652982ae8cff6e4b",
-      "panel": [
-        1,
-        1,
-        1,
-        1,
-        0
-      ],
-      "cycle_one_based": 400
-    },
-    {
-      "id": "five_colour_selected_cycle0073",
-      "file": "live_cells/five_colour_selected_cycle0073.tif",
-      "model": "live",
-      "mode": "raw",
-      "kind": "five-colour acquisition with three selected excitation channels",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "e5fbb54de2f0cd335a5e4b831211eb498c57fad597788c154fbc8d556c94bba6",
+      "sha256": "ce3ec72f5abd69bdab315a245e0e0177e4257f99f87298c23e31a5da60de1caf",
       "panel": [
         1,
         1,
@@ -408,47 +148,11 @@
         256,
         295
       ],
-      "cycle_one_based": 73
-    },
-    {
-      "id": "structure_spectrum_exchange_cell01",
-      "file": "fixed_cells/structure_spectrum_exchange_cell01.tif",
-      "model": "static",
-      "mode": "normalized",
-      "kind": "computational structure-spectrum reassignment of an acquired cell",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "float32",
       "excitation_nm": [
         561,
         532,
         488
-      ],
-      "sha256": "87405b610be4d93a88774c9c7e9910a5d4cdc6c1f4561232faf61dc7cf244ce3"
-    },
-    {
-      "id": "structure_spectrum_exchange_cell02",
-      "file": "fixed_cells/structure_spectrum_exchange_cell02.tif",
-      "model": "static",
-      "mode": "normalized",
-      "kind": "computational structure-spectrum reassignment of an acquired cell",
-      "axes": "CYX",
-      "shape": [
-        3,
-        512,
-        512
-      ],
-      "dtype": "float32",
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ],
-      "sha256": "89199d697f64394d7b24d9a96791fa28308e743f5ca6b0ab6c080be85eddd5b9"
+      ]
     },
     {
       "id": "NIH3T3_field33_three_bands",
@@ -467,69 +171,6 @@
       "license": "CC-BY-4.0",
       "sha256": "339086a00568d1e67b74b01fbae76a94c2cbee2dcdb6e6769db5f46084b0e02e",
       "source_field": "33",
-      "creator": "Leonel Malacrida",
-      "tile_size": 128,
-      "tile_overlap": 64
-    },
-    {
-      "id": "NIH3T3_field34_three_bands",
-      "file": "external_cells/NIH3T3_field34_three_bands.tif",
-      "model": "cells",
-      "mode": "raw",
-      "axes": "CYX",
-      "shape": [
-        3,
-        256,
-        256
-      ],
-      "dtype": "float32",
-      "kind": "integrated measured emission channels",
-      "source_doi": "10.5281/zenodo.13625087",
-      "license": "CC-BY-4.0",
-      "sha256": "2fd07880f08c6496bfce9faf85263bcf7b473d52917b48e2eb9e0eb5b3baed0e",
-      "source_field": "34",
-      "creator": "Leonel Malacrida",
-      "tile_size": 128,
-      "tile_overlap": 64
-    },
-    {
-      "id": "NIH3T3_field35_three_bands",
-      "file": "external_cells/NIH3T3_field35_three_bands.tif",
-      "model": "cells",
-      "mode": "raw",
-      "axes": "CYX",
-      "shape": [
-        3,
-        256,
-        256
-      ],
-      "dtype": "float32",
-      "kind": "integrated measured emission channels",
-      "source_doi": "10.5281/zenodo.13625087",
-      "license": "CC-BY-4.0",
-      "sha256": "c07b60e6e9ad758e976abcc4d4fcb95a4cbc3e39b8e8f7d2c1a414bdcd343131",
-      "source_field": "35",
-      "creator": "Leonel Malacrida",
-      "tile_size": 128,
-      "tile_overlap": 64
-    },
-    {
-      "id": "NIH3T3_field38_three_bands",
-      "file": "external_cells/NIH3T3_field38_three_bands.tif",
-      "model": "cells",
-      "mode": "raw",
-      "axes": "CYX",
-      "shape": [
-        3,
-        256,
-        256
-      ],
-      "dtype": "float32",
-      "kind": "integrated measured emission channels",
-      "source_doi": "10.5281/zenodo.13625087",
-      "license": "CC-BY-4.0",
-      "sha256": "31da0fc3ccb45a0b0fe275907ccba5af067b0d8a644673d3eef5ef151a5b9f84",
-      "source_field": "38",
       "creator": "Leonel Malacrida",
       "tile_size": 128,
       "tile_overlap": 64
