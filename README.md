@@ -63,6 +63,10 @@ See [shared_models/README.md](shared_models/README.md) for tiling options, self-
 
 The [Table 1 reproduction package](table1/) provides the matched ablation configurations, training and evaluation code, original data assignments, full single-stain library, and corresponding checkpoints. Large numerical files are distributed through the linked release.
 
+## Train the Fig. 6 models
+
+The [Fig. 6 training workflow](fig6/) includes the single-stain texture sources, fixed simulation settings and source assignments, measured response and noise models, complete cell and E. coli training recipes, validation, and inference. Both workflows start from random initialization and use observation-based self-supervision without component-map targets.
+
 ## Acknowledgements
 
 The spectral-attention backbone builds on [MST++](https://github.com/caiyuanhao1998/MST-plus-plus). External data sources and their licences are listed with the test data.

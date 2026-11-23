@@ -43,6 +43,8 @@ All supplied image inputs are TIFF files. `examples/` contains small normalized 
 
 ## Self-supervised training
 
+For the complete cell and E. coli workflows, including the original simulation settings, source assignments, schedules and validation, see [Fig. 6 training](../fig6/README.md).
+
 Run from `shared_models/`:
 
 ```sh

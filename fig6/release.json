@@ -1,0 +1,12 @@
+{
+  "tag": "fig6-training-v1.0",
+  "assets": [
+    {
+      "name": "fig6_textures.zip",
+      "bytes": 108557424,
+      "sha256": "9eb4f5495a3892b480a25c55e0a60b60ec5244139715837f7018adf9dcaf83b2",
+      "files": 1108,
+      "url": "https://github.com/beiming10/PhySMI/releases/download/fig6-training-v1.0/fig6_textures.zip"
+    }
+  ]
+}
