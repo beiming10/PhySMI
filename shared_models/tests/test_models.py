@@ -18,7 +18,8 @@ class ModelInterfaces(unittest.TestCase):
         for name in ['static','live','cells','ecoli']:
             with self.subTest(model=name):
                 c=load_config(name);model=build_model(c).eval()
-                image=read_input(ROOT/'examples'/(name+'_input.tif'))
+                image=(np.random.default_rng(42).uniform(0,.1,(c['input_channels'],128,128)).astype(np.float32)
+                       if name=='live' else read_input(ROOT/'examples'/(name+'_input.tif')))
                 self.assertEqual(image.shape[0],c['input_channels'])
                 panel=[1]*5 if c['known_panel'] else None
                 value=infer_array(model,image,c,panel=panel,tile_size=0)

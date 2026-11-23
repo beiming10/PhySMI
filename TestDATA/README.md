@@ -1,15 +1,13 @@
 # Test inputs
 
-This collection contains input images for the four public models. Laboratory
-fixed-cell and live-cell files have three channels in the order
+This collection contains fixed-cell, external-cell and bacterial input images. Laboratory
+fixed-cell files have three channels in the order
 **561, 532, 488 nm**. External NIH-3T3 inputs contain three integrated emission
 bands. E. coli contains five integrated emission bands.
 
 | Examples | Files | Model |
 |---|---:|---|
 | Fixed-cell inputs | 3 | `static` |
-| Four-colour live-cell sequence, first 10 frames | 1 | `live` |
-| Five-colour live-cell sequence, first 10 frames | 1 | `live` |
 | NIH-3T3 five-organelle field | 1 | `cells` |
 | E. coli mixed field | 1 | `ecoli` |
 
@@ -20,14 +18,13 @@ python shared_models/run_examples.py --list
 python shared_models/run_examples.py --output outputs/test_data --device cpu
 ```
 
-Use `--model static`, `--model live`, `--model cells` or `--model ecoli` to select
+Use `--model static`, `--model cells` or `--model ecoli` to select
 an application. An individual example can be selected with `--id COS7_Microscope1`, for
-example. The runner uses the settings in [examples.json](examples.json),
-including the different acquisition offsets for the five-colour live cell.
+example. The runner uses the settings in [examples.json](examples.json).
 
 All supplied input images are TIFF files. Acquired inputs retain
-acquisition-unit intensities. Live-cell stacks use `T,C,Y,X` axes; other
-inputs use `C,Y,X`. The structure–spectrum reassignment TIFF files are
+acquisition-unit intensities. Inputs use `C,Y,X` axes.
+The structure–spectrum reassignment TIFF files are
 normalized observations constructed from acquired cell images. No contrast
 stretch is applied to these test inputs. All five fixed-cell outputs remain
 enabled.

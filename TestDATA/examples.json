@@ -61,65 +61,6 @@
       "figure": "Fig. 4f"
     },
     {
-      "id": "live_four_colour",
-      "file": "live_cells/four_colour_first10.tif",
-      "model": "live",
-      "mode": "raw",
-      "axes": "TCYX",
-      "shape": [
-        10,
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "sha256": "f582dfed30d9a0f36d69d49a32fb9347d2887832956969ea1cdf4e2dd8c67c04",
-      "panel": [
-        1,
-        1,
-        1,
-        1,
-        0
-      ],
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ]
-    },
-    {
-      "id": "live_five_colour",
-      "file": "live_cells/five_colour_first10.tif",
-      "model": "live",
-      "mode": "raw",
-      "axes": "TCYX",
-      "shape": [
-        10,
-        3,
-        512,
-        512
-      ],
-      "dtype": "uint16",
-      "sha256": "ce3ec72f5abd69bdab315a245e0e0177e4257f99f87298c23e31a5da60de1caf",
-      "panel": [
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "offset": [
-        255,
-        256,
-        295
-      ],
-      "excitation_nm": [
-        561,
-        532,
-        488
-      ]
-    },
-    {
       "id": "NIH3T3_field33_three_bands",
       "file": "external_cells/NIH3T3_field33_three_bands.tif",
       "model": "cells",

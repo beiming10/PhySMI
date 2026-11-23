@@ -17,8 +17,6 @@ The following commands run from the repository root after installing `shared_mod
 
 ```sh
 python shared_models/infer.py --model static --input TestDATA/fixed_cells/COS7_Microscope1.tif --mode raw --output outputs/static.tif
-python shared_models/infer.py --model live --input TestDATA/live_cells/four_colour_first10.tif --mode raw --panel 1,1,1,1,0 --output outputs/live_four.tif
-python shared_models/infer.py --model live --input TestDATA/live_cells/five_colour_first10.tif --mode raw --panel 1,1,1,1,1 --offset 255,256,295 --output outputs/live_five.tif
 python shared_models/infer.py --model cells --input TestDATA/external_cells/NIH3T3_field33_three_bands.tif --mode raw --output outputs/cells.tif
 python shared_models/infer.py --model ecoli --input TestDATA/ecoli/Ecoli_mixture_five_bands.tif --mode raw --output outputs/ecoli.tif
 ```
@@ -41,7 +39,7 @@ python shared_models/run_examples.py --output outputs/all_examples
 
 Each example is paired with its own input mode, model and acquisition settings. The batch runner loads each model once and writes separate component stacks. It does not overwrite an existing output directory.
 
-All supplied image inputs are TIFF files. `examples/` contains small normalized float32 TIFF stacks for interface testing. The single-channel TIFF files in `examples/own_single_stain/` form a small laboratory texture-library subset for the training example.
+All supplied image inputs are TIFF files. `examples/` contains small normalized float32 TIFF stacks for the fixed-cell, external-cell and bacterial interfaces. The single-channel TIFF files in `examples/own_single_stain/` form a small laboratory texture-library subset for the training example.
 
 ## Self-supervised training
 
