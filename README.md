@@ -60,6 +60,10 @@ Predictions are float32 TIFF or NPY arrays. The accompanying JSON identifies com
 
 See [shared_models/README.md](shared_models/README.md) for live-cell examples, tiling options, self-supervised training and interface tests.
 
+## Reproduce Table 1
+
+The [Table 1 reproduction package](table1/) provides the matched ablation configurations, training and evaluation code, original data assignments, full single-stain library, and corresponding checkpoints. Large numerical files are distributed through the linked release.
+
 ## Acknowledgements
 
 The spectral-attention backbone builds on [MST++](https://github.com/caiyuanhao1998/MST-plus-plus). External data sources and their licences are listed with the test data.

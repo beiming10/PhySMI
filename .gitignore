@@ -4,3 +4,5 @@ __pycache__/
 outputs/
 OUTPUT/
 training_runs/
+table1_data/
+table1_results/

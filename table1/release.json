@@ -1,0 +1,33 @@
+{
+  "tag": "table1-v1.0",
+  "assets": [
+    {
+      "name": "table1_training.zip",
+      "bytes": 350245481,
+      "sha256": "02eb19733bcb19e7369c0d6063ce6f268b5f750bbb552b931818510e4d4bce62",
+      "files": 500,
+      "url": "https://github.com/beiming10/PhySMI/releases/download/table1-v1.0/table1_training.zip"
+    },
+    {
+      "name": "table1_test.zip",
+      "bytes": 79573450,
+      "sha256": "0371c1c90c93216e0011190a600de7732d11dba169c9d1fba0a18c741abe9672",
+      "files": 150,
+      "url": "https://github.com/beiming10/PhySMI/releases/download/table1-v1.0/table1_test.zip"
+    },
+    {
+      "name": "single_stain_library.zip",
+      "bytes": 137709508,
+      "sha256": "de14f5ed3aebf593987a3eec9001318fdd3a3f3a267f37c557fd8842738687ad",
+      "files": 1708,
+      "url": "https://github.com/beiming10/PhySMI/releases/download/table1-v1.0/single_stain_library.zip"
+    },
+    {
+      "name": "table1_checkpoints.zip",
+      "bytes": 53050197,
+      "sha256": "f879e37da9ee9b97de2ae24876baf51cac02dfffba1a0c6dbd9cc465a0671dbc",
+      "files": 6,
+      "url": "https://github.com/beiming10/PhySMI/releases/download/table1-v1.0/table1_checkpoints.zip"
+    }
+  ]
+}
